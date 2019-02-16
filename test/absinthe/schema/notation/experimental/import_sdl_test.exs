@@ -85,8 +85,11 @@ defmodule Absinthe.Schema.Notation.Experimental.ImportSdlTest do
 
   describe "directives" do
     test "can be defined" do
-      assert %{name: "foo", identifier: :foo, locations: [:object, :scalar]} = lookup_compiled_directive(Definition, :foo)
-      assert %{name: "bar", identifier: :bar, locations: [:object, :scalar]} = lookup_compiled_directive(Definition, :bar)
+      assert %{name: "foo", identifier: :foo, locations: [:object, :scalar]} =
+               lookup_compiled_directive(Definition, :foo)
+
+      assert %{name: "bar", identifier: :bar, locations: [:object, :scalar]} =
+               lookup_compiled_directive(Definition, :bar)
     end
   end
 
